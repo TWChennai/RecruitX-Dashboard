@@ -9,12 +9,12 @@ import { Interview } from './interview-stats/interview.model';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    public pageNumber: number = 1;
+    public pageNumber: number = 2;
     public interviews: Interview[] = [];
 
     constructor(service: DashBoardService) {
-        let timeInterval = Observable.interval(30000).timeInterval();
-        timeInterval.subscribe(data => this.pageNumber = data.value % 2)
+        let timeInterval = Observable.interval(3000).timeInterval();
+        timeInterval.subscribe(data => this.pageNumber = data.value % 3)
         service.getAllInterviews().subscribe((data) => this.interviews = data)
     }
 }
