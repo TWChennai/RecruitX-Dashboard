@@ -13,3 +13,15 @@ body {
     text-align: center;
     background: #2977f4;
 }
+
+.title {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.panelists {
+    font-size: 60px;
+    line-height: 1.3em;
+    text-align: center;
+}

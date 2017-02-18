@@ -9,7 +9,7 @@ import { Interview } from './interview-stats/interview.model';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    public pageNumber: number = 0;
+    public pageNumber: number = 1;
     public interviews: Interview[] = [];
 
     constructor(service: DashBoardService) {
