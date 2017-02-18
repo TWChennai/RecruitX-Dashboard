@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { InterviewStatsComponent } from './interview-stats/interview-stats.component';
 import { DashBoardService } from './dash-board.service';
 import { HttpModule } from '@angular/http';
+import { PairWithComponent } from './pair-with/pair-with.component';
 
 @NgModule({
     imports: [
@@ -11,7 +12,8 @@ import { HttpModule } from '@angular/http';
     ],
     declarations: [
         AppComponent,
-        InterviewStatsComponent
+        InterviewStatsComponent,
+        PairWithComponent
     ],
     providers: [DashBoardService],
     bootstrap: [AppComponent]

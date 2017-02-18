@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DashBoardService } from '../dash-board.service';
+import { Component, Input } from '@angular/core';
 import { Interview } from './interview.model';
 
 @Component({
@@ -7,11 +6,7 @@ import { Interview } from './interview.model';
     templateUrl: 'interview-stats.component.html'
 })
 export class InterviewStatsComponent {
-    private interviews: Interview[] = [];
-
-    constructor(service: DashBoardService) {
-        service.getAllInterviews().subscribe((data) => this.interviews = data)
-    }
+    @Input() interviews: Interview[] = [];
 
     getInterviewsFor = (role: string) => this.interviews.filter(interview => role.includes(interview.candidate.role.name)).length;
 }

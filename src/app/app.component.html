@@ -1,4 +1,5 @@
 <main>
     <h1>RecruitX</h1>
-    <interview-stats></interview-stats>
+    <interview-stats *ngIf="pageNumber === 0" [interviews]="interviews"></interview-stats>
+    <pair-with *ngIf="pageNumber === 1"></pair-with>
 </main>
