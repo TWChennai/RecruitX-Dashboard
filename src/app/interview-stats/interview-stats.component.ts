@@ -4,8 +4,7 @@ import { Interview } from './interview.model';
 
 @Component({
     selector: 'interview-stats',
-    template: `<div>Dev interview count</div>
-                <div>{{getInterviewsFor("Dev")}}</div>`
+    templateUrl: 'interview-stats.html'
 })
 export class InterviewStatsComponent {
     private interviews: Interview[] = [];
@@ -14,5 +13,5 @@ export class InterviewStatsComponent {
         service.getAllInterviews().subscribe((data) => this.interviews = data)
     }
 
-    getInterviewsFor = (role: string) => this.interviews.filter(interview => interview.candidate.role.name == role).length;
+    getInterviewsFor = (role: string) => this.interviews.filter(interview => role.includes(interview.candidate.role.name)).length;
 }
