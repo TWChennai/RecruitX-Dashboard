@@ -4,7 +4,7 @@ import { Interview } from './interview.model';
 
 @Component({
     selector: 'interview-stats',
-    templateUrl: 'interview-stats.html'
+    templateUrl: 'interview-stats.component.html'
 })
 export class InterviewStatsComponent {
     private interviews: Interview[] = [];

@@ -1,4 +1,15 @@
 body {
-    background: #0147A7;
+    background: transparent;
+    color: #000;
+}
+.circle {
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    font-size: 50px;
     color: #fff;
+    line-height: 500px;
+    text-align: center;
+    background: #2977f4;
 }
