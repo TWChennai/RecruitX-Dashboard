@@ -4,12 +4,12 @@ body {
 }
 .circle {
     display: inline-block;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     font-size: 50px;
     color: #fff;
-    line-height: 500px;
+    line-height: 400px;
     text-align: center;
     background: #2977f4;
 }
