@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import '../../public/css/styles.css';
 import { Observable } from 'rxjs';
 import { DashBoardService } from './dash-board.service';
-import { Interview } from './interview-stats/interview.model';
+import { Interview } from './interview.model';
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',

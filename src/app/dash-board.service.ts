@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { Interview } from './interview-stats/interview.model';
+import { Interview } from './interview.model';
 import { Observable } from 'rxjs';
 
 @Injectable()

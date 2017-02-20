@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Interview } from './interview.model';
+import { Interview } from '../interview.model';
 
 @Component({
     selector: 'interview-stats',

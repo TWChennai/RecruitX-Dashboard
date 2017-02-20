@@ -1,5 +1,5 @@
 import {Component, Input} from "@angular/core";
-import {Interview} from "../interview-stats/interview.model";
+import {Interview} from "../interview.model";
 @Component({
     selector: 'to-thank',
     template: `<div class="title">Thank You for signing up</div>

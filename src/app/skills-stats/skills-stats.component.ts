@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Interview} from "../interview-stats/interview.model";
+import {Interview} from "../interview.model";
 @Component({
     selector: 'skills-stats',
     templateUrl: 'skills-stats.component.html'
