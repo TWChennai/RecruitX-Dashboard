@@ -1,8 +1,8 @@
 import {Component, Input} from '@angular/core';
 import {Interview} from "../interview-stats/interview.model";
 @Component({
-    selector: 'skils-stats',
-    templateUrl: 'skils-stats.component.html'
+    selector: 'skills-stats',
+    templateUrl: 'skills-stats.component.html'
 })
 export class SkilsStatsComponent {
     @Input() interviews: Interview[] = [];

@@ -6,7 +6,7 @@ import { DashBoardService } from './dash-board.service';
 import { HttpModule } from '@angular/http';
 import { PairWithComponent } from './pair-with/pair-with.component';
 import {ToThankComponent} from "./to-thank/to-thank.component";
-import {SkilsStatsComponent} from "./skils-stats/skils-stats.component";
+import {SkilsStatsComponent} from "./skills-stats/skills-stats.component";
 
 @NgModule({
     imports: [
