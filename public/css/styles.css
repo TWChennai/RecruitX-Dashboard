@@ -28,3 +28,7 @@ body {
     padding: 2em;
     background-color: transparent;
 }
+.row{
+    width: 600px;
+    height: 600px;
+}
