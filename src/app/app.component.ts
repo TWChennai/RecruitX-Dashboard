@@ -14,7 +14,7 @@ export class AppComponent {
 
     constructor(service: DashBoardService) {
         let timeInterval = Observable.interval(3000).timeInterval();
-        timeInterval.subscribe(data => this.pageNumber = data.value % 4);
+        timeInterval.subscribe(data => this.pageNumber = data.value % 5);
         service.getAllInterviews().subscribe((data) => this.interviews = data)
     }
 }
