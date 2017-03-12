@@ -11,7 +11,15 @@ body {
     color: #fff;
     line-height: 400px;
     text-align: center;
-    background: #2977f4;
+}
+.dev{
+    background: #8ea646;
+}
+.qa{
+    background: #ce185c;
+}
+.ba{
+    background: #570063;
 }
 .title {
     font-size: 65px;
