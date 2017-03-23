@@ -1,18 +1,25 @@
 import { Component, Input } from '@angular/core';
+import {SignUpList} from "../signUpList.model";
 @Component({
     selector: 'line-chart',
     templateUrl: 'line-chart.component.html'
 })
 export class LineChartComponent {
+    @Input() signUpsList: SignUpList[] = [];
 
+    public lineChartData() {
+        return this.signUpsList.map(eachList => {
+            return {
+                data: [eachList.signUpsCount],
+                label: eachList.team,
+                lineTension: 0.2
+            }
+        });
+    }
 
-    public lineChartData:Array<any> = [
-        {data: [65, 59, 80, 81, 56, 55, 40], label: 'IFaber',lineTension: 0.2},
-        {data: [28, 48, 40, 19, 86, 27, 90], label: 'BCG',lineTension: 0.2},
-        {data: [18, 48, 77, 9, 100, 27, 40], label: 'PAM',lineTension: 0.2}
-    ];
-    public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-    public line_options:any = { responsive: true, scaleShowHorizontalLines: false,
+    public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+    public line_options: any = {
+        responsive: true, scaleShowHorizontalLines: false,
         scaleShowVerticalLines: false, animationEasing: "easeInOutElastic",
         maintainAspectRatio: false, legend: { display: false } };
 
