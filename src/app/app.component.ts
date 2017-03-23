@@ -3,6 +3,7 @@ import '../../public/css/styles.css';
 import { Observable } from 'rxjs';
 import { DashBoardService } from './dash-board.service';
 import { Interview } from './interview.model';
+import {SignUpList} from "./signUpList.model";
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
