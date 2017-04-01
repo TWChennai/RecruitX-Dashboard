@@ -2,6 +2,7 @@ body {
     background: transparent;
     color: #000;
 }
+
 .circle {
     display: inline-block;
     width: 400px;
@@ -13,15 +14,19 @@ body {
     text-align: center;
     margin: 0 20px;
 }
-.dev{
+
+.dev {
     background: #8ea646;
 }
-.qa{
+
+.qa {
     background: #ce185c;
 }
-.ba{
+
+.ba {
     background: #570063;
 }
+
 .title {
     font-size: 65px;
     font-weight: 200;
@@ -33,11 +38,18 @@ body {
     line-height: 1.3em;
     text-align: center;
 }
-.images{
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.images img {
     padding: 2em;
     background-color: transparent;
 }
-.row{
+
+.row {
     width: 100%;
     height: 600px;
 }
