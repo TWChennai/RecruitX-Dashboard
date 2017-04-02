@@ -1,8 +1,7 @@
 <main>
-    <h1>RecruitX</h1>
-    <!--<pair-with *ngIf="pageNumber === 0" [interviews]="interviews"></pair-with>-->
-    <!--<to-thank *ngIf="pageNumber === 1" [interviews]="interviews"></to-thank>-->
-    <!--<skills-stats *ngIf="pageNumber === 2" [interviews]="interviews"></skills-stats >-->
-    <!--<interview-stats *ngIf="pageNumber === 3" [interviews]="interviews"></interview-stats>-->
-    <line-chart [signUpsList]="signUpsList"></line-chart>
+    <pair-with *ngIf="pageNumber === 0 && interviews != 0" [interviews]="interviews"></pair-with>
+    <to-thank *ngIf="pageNumber === 1" [interviews]="interviews"></to-thank>
+    <skills-stats *ngIf="pageNumber === 2 && interviews != 0" [interviews]="interviews"></skills-stats >
+    <line-chart *ngIf="pageNumber === 3" [signUpsList]="signUpsList"></line-chart>
+    <interview-stats *ngIf="pageNumber === 4" [interviews]="interviews"></interview-stats>
 </main>

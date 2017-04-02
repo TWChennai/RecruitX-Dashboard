@@ -2,7 +2,8 @@ import {Component, Input} from "@angular/core";
 import {Interview} from "../interview.model";
 @Component({
     selector: 'to-thank',
-    template: `<img src="../../../public/images/Star.png" style="width:350px; height:170px;"/>
+    template: `<h1>RecruitX</h1>
+                <img src="../../../public/images/Star.png" style="width:350px; height:170px;"/>
                 <div class="title">You are our stars! Thank You for signing up :)</div>
                 <div *ngFor="let panelist of getPanelistsWithPartiallyFilledInterviews()">
                     <div class="panelists">{{panelist}}</div>
