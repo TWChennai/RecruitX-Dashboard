@@ -8,6 +8,8 @@ export class LineChartComponent {
     @Input() signUpsList: SignUpList[] = [];
 
     public lineChartData() {
+        console.log("***************");
+        console.log(this.signUpsList);
         return this.signUpsList.map(eachList => {
             return {
                 data: [eachList.signUpsCount],
@@ -17,7 +19,7 @@ export class LineChartComponent {
         });
     }
 
-    public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+    public lineChartLabels: Array<any> = ['week-1', 'week-2', 'week-3', 'week-4'];
     public line_options: any = {
         responsive: true, scaleShowHorizontalLines: false,
         scaleShowVerticalLines: false, animationEasing: "easeInOutElastic",

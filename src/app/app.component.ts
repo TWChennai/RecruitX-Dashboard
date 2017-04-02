@@ -12,11 +12,11 @@ import {SignUpList} from "./signUpList.model";
 export class AppComponent {
     public pageNumber: number = 3;
     public interviews: Interview[] = [];
-    public signUpsList: SignUpList[] = [];
+    public signUpsList: SignUpList[];
 
     constructor(service: DashBoardService) {
-        let timeInterval = Observable.interval(3000).timeInterval();
-        timeInterval.subscribe(data => this.pageNumber = data.value % 5);
+        // let timeInterval = Observable.interval(3000).timeInterval();
+        // timeInterval.subscribe(data => this.pageNumber = data.value % 5);
         service.getAllInterviews().subscribe((data) => this.interviews = data)
         service.getAllSignUps().subscribe((data) => {
             this.signUpsList = data;

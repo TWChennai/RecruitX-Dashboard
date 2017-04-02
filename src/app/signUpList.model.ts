@@ -1,6 +1,6 @@
 export class SignUpList {
     public team: string;
-    public signUpsCount: number;
+    public signUpsCount: any[];
 
     constructor(signUps: any) {
         this.team = signUps.team;
