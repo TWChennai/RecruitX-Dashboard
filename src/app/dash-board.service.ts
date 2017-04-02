@@ -23,7 +23,7 @@ export class DashBoardService {
         let headers = new Headers({Authorization: "ab998e4e-4a14-4e00-bad7-0b542ed35360"});
         return this.http.get("https://recruitx-qa.herokuapp.com/panelists?number_of_weeks=4",
             {headers: headers}).map(data => {
-            let totalSignUpList:any[] = data.json();
+            let totalSignUpList: any[] = data.json();
             let collectedSignUpList: {} = {};
 
             totalSignUpList.forEach(function (x) {
@@ -37,9 +37,7 @@ export class DashBoardService {
             });
             return Object.values(collectedSignUpList).map(function (signUpList) {
                 return new SignUpList(signUpList);
-
             });
-
         });
     }
 }

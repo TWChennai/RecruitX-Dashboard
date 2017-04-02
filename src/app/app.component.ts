@@ -12,7 +12,7 @@ import {SignUpList} from "./signUpList.model";
 export class AppComponent {
     public pageNumber: number = 3;
     public interviews: Interview[] = [];
-    public signUpsList: SignUpList[];
+    public signUpsList: SignUpList[] = [];
 
     constructor(service: DashBoardService) {
         // let timeInterval = Observable.interval(3000).timeInterval();

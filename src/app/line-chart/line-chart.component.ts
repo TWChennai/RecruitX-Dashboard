@@ -8,8 +8,6 @@ export class LineChartComponent {
     @Input() signUpsList: SignUpList[] = [];
 
     public lineChartData() {
-        console.log("***************");
-        console.log(this.signUpsList);
         return this.signUpsList.map(eachList => {
             return {
                 data: [eachList.signUpsCount],
