@@ -3,11 +3,7 @@ import {Interview} from '../interview.model';
 
 @Component({
     selector: 'pair-with',
-    template: `<img src="../../../public/images/Pair.png" style="width:170px; height:120px;"/>
-                <div class="title">Do you want pair with?</div>
-                <div *ngFor="let panelist of getPanelistsWithPartiallyFilledInterviews()">
-                    <div class="panelists">{{panelist}}</div>
-                </div>`
+    templateUrl: 'pair-with.component.html'
 })
 export class PairWithComponent {
     @Input() interviews: Interview[] = [];

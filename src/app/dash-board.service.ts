@@ -35,7 +35,7 @@ export class DashBoardService {
                     }
                 });
             });
-            return Object.values(collectedSignUpList).map(function (signUpList) {
+            return Object.values(collectedSignUpList).map(function (signUpList: any[]) {
                 return new SignUpList(signUpList);
             });
         });

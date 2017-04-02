@@ -1,0 +1,7 @@
+<div>
+    <img src="../../../public/images/Pair.png" style="width:170px; height:120px;"/>
+    <div class="title">Do you want pair with?</div>
+    <div *ngFor="let panelist of getPanelistsWithPartiallyFilledInterviews()">
+        <div class="panelists">{{panelist}}</div>
+    </div>
+</div>
