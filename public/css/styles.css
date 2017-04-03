@@ -9,22 +9,22 @@ body {
     height: 400px;
     border-radius: 50%;
     font-size: 50px;
-    color: #fff;
+    color: #FFF;
     line-height: 400px;
     text-align: center;
     margin: 0 20px;
 }
 
 .dev {
-    background: #8ea646;
+    background: linear-gradient(to bottom right, #8EA646, #AFC07D);
 }
 
 .qa {
-    background: #ce185c;
+    background: linear-gradient(to bottom right, #CE185C, #DC5D8C);
 }
 
 .ba {
-    background: #570063;
+    background: linear-gradient(to bottom right, #570063, #894C91);
 }
 
 .title {
