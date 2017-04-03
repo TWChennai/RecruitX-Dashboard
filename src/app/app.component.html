@@ -1,7 +1,7 @@
 <main>
-    <pair-with *ngIf="pageNumber === 0 && hasSignUps()" [interviews]="interviews"></pair-with>
+    <pair-with *ngIf="pageNumber === 0" [interviews]="interviews"></pair-with>
     <to-thank *ngIf="pageNumber === 1" [interviews]="interviews"></to-thank>
-    <skills-stats *ngIf="pageNumber === 2 && interviews.length>0" [interviews]="interviews"></skills-stats >
-    <line-chart *ngIf="pageNumber === 3" [signUpsList]="signUpsList"></line-chart>
-    <interview-stats *ngIf="pageNumber === 4" [interviews]="interviews"></interview-stats>
+    <skills-stats *ngIf="pageNumber === 2" [interviews]="interviews"></skills-stats >
+    <interview-stats *ngIf="pageNumber === 3" [interviews]="interviews"></interview-stats>
+    <line-chart *ngIf="pageNumber === 4" [signUpsList]="signUpsList"></line-chart>
 </main>

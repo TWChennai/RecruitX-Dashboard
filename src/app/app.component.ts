@@ -16,7 +16,16 @@ export class AppComponent {
 
     constructor(service: DashBoardService) {
         let timeInterval = Observable.interval(3000).timeInterval();
-        timeInterval.subscribe(data => this.pageNumber = data.value % 5);
+        timeInterval.subscribe(data => {
+            let currentPageIndex: number = data.value % 5;
+            if(currentPageIndex === 0 && !this.hasSignUps()){
+                currentPageIndex++;
+            }
+            if(currentPageIndex ===2 && this.interviews.length > 0){
+                currentPageIndex++;
+            }
+            return this.pageNumber = currentPageIndex;
+        });
         service.getAllInterviews().subscribe((data) => this.interviews = data);
         service.getAllSignUps().subscribe((data) => this.signUpsList = data);
 
