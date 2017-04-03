@@ -18,9 +18,20 @@ export class AppComponent {
         let timeInterval = Observable.interval(3000).timeInterval();
         timeInterval.subscribe(data => this.pageNumber = data.value % 5);
         service.getAllInterviews().subscribe((data) => this.interviews = data);
-        service.getAllSignUps().subscribe((data) => {
-            this.signUpsList = data;
-        });
+        service.getAllInterviews().subscribe((data) => this.interviews = data)
+        service.getAllSignUps().subscribe((data) => this.signUpsList = data);
 
+    }
+
+    public hasSignUps() {
+        let signUpFlag: boolean = false;
+        this.signUpsList.forEach(function (x) {
+            x.signUpsCount.forEach(function (y) {
+                if (y > 0) {
+                    signUpFlag = true;
+                }
+            });
+        });
+        return signUpFlag;
     }
 }
