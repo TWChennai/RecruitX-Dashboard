@@ -18,7 +18,6 @@ export class AppComponent {
         let timeInterval = Observable.interval(3000).timeInterval();
         timeInterval.subscribe(data => this.pageNumber = data.value % 5);
         service.getAllInterviews().subscribe((data) => this.interviews = data);
-        service.getAllInterviews().subscribe((data) => this.interviews = data)
         service.getAllSignUps().subscribe((data) => this.signUpsList = data);
 
     }
