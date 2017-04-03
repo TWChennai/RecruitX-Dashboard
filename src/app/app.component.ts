@@ -18,13 +18,8 @@ export class AppComponent {
         let timeInterval = Observable.interval(3000).timeInterval();
         timeInterval.subscribe(data => {
             let currentPageIndex: number = data.value % 5;
-            if(currentPageIndex === 0 && !this.hasSignUps()){
-                currentPageIndex++;
-            }
-            if(currentPageIndex ===2 && this.interviews.length > 0){
-                currentPageIndex++;
-            }
-            return this.pageNumber = currentPageIndex;
+            let shouldSkip = (currentPageIndex === 0 && !this.hasSignUps()) || (currentPageIndex === 2 && this.interviews.length > 0);
+            this.pageNumber = shouldSkip ? ++currentPageIndex : currentPageIndex;
         });
         service.getAllInterviews().subscribe((data) => this.interviews = data);
         service.getAllSignUps().subscribe((data) => this.signUpsList = data);
