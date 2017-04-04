@@ -18,7 +18,7 @@ export class AppComponent {
         let timeInterval = Observable.interval(3000).timeInterval();
         timeInterval.subscribe(data => {
             let currentPageIndex: number = data.value % 5;
-            let shouldSkip = (currentPageIndex === 0 && !this.hasSignUps()) || (currentPageIndex === 2 && this.interviews.length > 0);
+            let shouldSkip = (currentPageIndex === 0 && !this.hasSignUps()) || (currentPageIndex === 2 && this.interviews.length === 0);
             this.pageNumber = shouldSkip ? ++currentPageIndex : currentPageIndex;
         });
         service.getAllInterviews().subscribe((data) => this.interviews = data);
@@ -28,9 +28,9 @@ export class AppComponent {
 
     public hasSignUps() {
         let signUpFlag: boolean = false;
-        this.signUpsList.forEach(function (x) {
-            x.signUpsCount.forEach(function (y) {
-                if (y > 0) {
+        this.signUpsList.forEach(function (eachIndex) {
+            eachIndex.signUpsCount.forEach(function (value) {
+                if (value > 0) {
                     signUpFlag = true;
                 }
             });
