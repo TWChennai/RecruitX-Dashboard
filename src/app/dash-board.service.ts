@@ -35,7 +35,7 @@ export class DashBoardService {
                     }
                 });
             });
-            return Object.values(collectedSignUpList).map((signUpList: any[]) => new SignUpList(signUpList));
+            return (<any>Object).values(collectedSignUpList).map((signUpList: any[]) => new SignUpList(signUpList));
         });
     }
 }
