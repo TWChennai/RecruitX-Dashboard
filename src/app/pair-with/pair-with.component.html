@@ -2,7 +2,7 @@
 <div>
     <img src="../../../public/images/Pair.png" style="width:170px; height:120px;"/>
     <div class="title">Do you want pair with?</div>
-    <div class="panelists" *ngFor="let panelist of getPanelistsWithPartiallyFilledInterviews()">
+    <div class="panelists" *ngFor="let panelist of partiallyFilledSignUps">
         <i class="fa fa-user fa-3x" aria-hidden="true"></i>
         <div>{{panelist}}</div>
     </div>

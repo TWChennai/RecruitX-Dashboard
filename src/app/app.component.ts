@@ -15,10 +15,11 @@ export class AppComponent {
     public signUpsList: SignUpList[] = [];
 
     constructor(service: DashBoardService) {
+        //noinspection TypeScriptUnresolvedFunction
         let timeInterval = Observable.interval(3000).timeInterval();
         timeInterval.subscribe(data => {
             let currentPageIndex: number = data.value % 5;
-            let shouldSkip = (currentPageIndex === 0 && !this.hasSignUps()) || (currentPageIndex === 2 && this.interviews.length === 0);
+            let shouldSkip = (currentPageIndex === 0 && (this.partialSignUps().length == 0)) || (currentPageIndex === 2 && this.interviews.length === 0);
             this.pageNumber = shouldSkip ? ++currentPageIndex : currentPageIndex;
         });
         service.getAllInterviews().subscribe((data) => this.interviews = data);
@@ -26,15 +27,12 @@ export class AppComponent {
 
     }
 
-    public hasSignUps() {
-        let signUpFlag: boolean = false;
-        this.signUpsList.forEach(function (eachIndex) {
-            eachIndex.signUpsCount.forEach(function (value) {
-                if (value > 0) {
-                    signUpFlag = true;
-                }
-            });
-        });
-        return signUpFlag;
+    public partialSignUps() {
+        let panelists: string[] = this.interviews
+            .filter(interview => interview.signup && interview.panelists.length > 0)
+            .map(interview => interview.panelists[0].name);
+        return this.removeDuplicates(panelists).slice(0, 5);
     }
+
+    removeDuplicates = (list: string[]) => list.filter((elem, pos, arr) => arr.indexOf(elem) == pos);
 }
