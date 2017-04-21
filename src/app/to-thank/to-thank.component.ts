@@ -5,8 +5,9 @@ import {Interview} from "../interview.model";
     template: `<h1>RecruitX</h1>
                 <img src="../../../public/images/Star.png" style="width:350px; height:170px;"/>
                 <div class="title">You are our stars! Thank You for signing up :)</div>
-                <div *ngFor="let panelist of getPanelistsWithPartiallyFilledInterviews()">
-                    <div class="panelists">{{panelist}}</div>
+                <div class="panelists" *ngFor="let panelist of getPanelistsWithPartiallyFilledInterviews()">
+                    <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                    <div>{{panelist}}</div>
                 </div>`
 })
 
