@@ -18,10 +18,10 @@ export class LineChartComponent {
     }
 
     public lineChartLabels: Array<any> = ['week-1', 'week-2', 'week-3', 'week-4'];
-    public line_options: any = {
+    public lineChartOptions: any = {
         responsive: true, scaleShowHorizontalLines: false,
         scaleShowVerticalLines: false, animationEasing: "easeInOutElastic",
-        maintainAspectRatio: false, legend: {display: false}
+        maintainAspectRatio: false, legend: {display: true}
     };
 
     public lineChartColors: Array<any> = [
